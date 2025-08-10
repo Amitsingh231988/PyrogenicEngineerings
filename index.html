@@ -1,0 +1,375 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pyramidz PE - Enclosure Locks, Handles & More</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <!-- Fixed Header -->
+    <header class="header">
+        <div class="container">
+            <div class="header-content">
+                <div class="logo">
+                    <h2>Pyramidz PE</h2>
+                </div>
+                <nav class="nav">
+                    <a href="#home" class="nav-link active">Home</a>
+                    <a href="#products" class="nav-link">Products</a>
+                    <a href="#about" class="nav-link">About</a>
+                    <a href="#contact" class="nav-link">Contact</a>
+                </nav>
+                <div class="header-contact">
+                    <div class="contact-info">
+                        <span><i class="fas fa-phone"></i> +91-80-2340-1588</span>
+                        <span><i class="fas fa-envelope"></i> sales@pyramidbangalore.com</span>
+                    </div>
+                    <button class="btn btn--primary" id="downloadBtn">
+                        <i class="fas fa-download"></i> Download Catalogue
+                    </button>
+                </div>
+                <button class="mobile-menu-btn" id="mobileMenuBtn">
+                    <i class="fas fa-bars"></i>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Mobile Menu -->
+    <div class="mobile-menu hidden" id="mobileMenu">
+        <div class="mobile-menu-content">
+            <a href="#home" class="mobile-nav-link">Home</a>
+            <a href="#products" class="mobile-nav-link">Products</a>
+            <a href="#about" class="mobile-nav-link">About</a>
+            <a href="#contact" class="mobile-nav-link">Contact</a>
+            <button class="btn btn--primary mobile-download-btn" id="mobileDownloadBtn">
+                <i class="fas fa-download"></i> Download Catalogue
+            </button>
+        </div>
+    </div>
+
+    <!-- Main Content -->
+    <main>
+        <!-- Home Section -->
+        <section id="home" class="section home-section">
+            <!-- Hero Section -->
+            <div class="hero">
+                <div class="container">
+                    <div class="hero-content">
+                        <h1>Pyrogenic Engineerings (I) Pvt Ltd</h1>
+                        <p class="hero-tagline">Enclosure Locks, Handles & More…</p>
+                        <p class="hero-description">We make sure all our products are made using the best in class machines using top quality materials. Each product is hand-checked and packed, this ensures the best performance from all of our products.</p>
+                        <div class="hero-actions">
+                            <button class="btn btn--primary btn--lg" id="heroDownloadBtn">
+                                <i class="fas fa-download"></i> Download Catalogue
+                            </button>
+                            <button class="btn btn--outline btn--lg" id="heroContactBtn">
+                                <i class="fab fa-whatsapp"></i> Contact Us
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Product Categories -->
+            <div class="categories-section">
+                <div class="container">
+                    <h2>Our Product Categories</h2>
+                    <div class="categories-grid">
+                        <div class="category-card" data-category="Quarter Turn Locks">
+                            <div class="category-icon">
+                                <i class="fas fa-lock"></i>
+                            </div>
+                            <h3>Quarter Turn Locks</h3>
+                            <p>Heavy duty and standard quarter turn locks with various barrel lengths</p>
+                        </div>
+                        <div class="category-card" data-category="3 Point Locks">
+                            <div class="category-icon">
+                                <i class="fas fa-shield-alt"></i>
+                            </div>
+                            <h3>3 Point Locks</h3>
+                            <p>Round rod and flat rod 3 point locking systems for panel enclosures</p>
+                        </div>
+                        <div class="category-card" data-category="Canopy Locks/Hinges">
+                            <div class="category-icon">
+                                <i class="fas fa-door-open"></i>
+                            </div>
+                            <h3>Canopy Locks/Hinges</h3>
+                            <p>Specialized locks and hinges for canopy and outdoor enclosures</p>
+                        </div>
+                        <div class="category-card" data-category="Castle Interlocks">
+                            <div class="category-icon">
+                                <i class="fas fa-key"></i>
+                            </div>
+                            <h3>Castle Interlocks</h3>
+                            <p>Safety interlocking systems for industrial applications</p>
+                        </div>
+                        <div class="category-card" data-category="Hinges">
+                            <div class="category-icon">
+                                <i class="fas fa-arrows-alt-h"></i>
+                            </div>
+                            <h3>Hinges</h3>
+                            <p>Wide range of concealed and exposed hinges for various applications</p>
+                        </div>
+                        <div class="category-card" data-category="Handles">
+                            <div class="category-icon">
+                                <i class="fas fa-hand-paper"></i>
+                            </div>
+                            <h3>Handles</h3>
+                            <p>Door handles in various materials and configurations</p>
+                        </div>
+                        <div class="category-card" data-category="Gaskets">
+                            <div class="category-icon">
+                                <i class="fas fa-circle"></i>
+                            </div>
+                            <h3>Gaskets</h3>
+                            <p>EPDM, XLPE and other sealing solutions</p>
+                        </div>
+                        <div class="category-card" data-category="Accessories">
+                            <div class="category-icon">
+                                <i class="fas fa-tools"></i>
+                            </div>
+                            <h3>Accessories</h3>
+                            <p>Panel accessories, legend plates, and mounting hardware</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Products Section -->
+        <section id="products" class="section products-section hidden">
+            <div class="container">
+                <div class="products-layout">
+                    <aside class="products-sidebar">
+                        <h3>Categories</h3>
+                        <div class="sidebar-search">
+                            <input type="text" class="form-control" id="productSearch" placeholder="Search products...">
+                        </div>
+                        <ul class="category-list">
+                            <li><a href="#" class="category-filter active" data-category="all">All Products</a></li>
+                            <li><a href="#" class="category-filter" data-category="Quarter Turn Locks">Quarter Turn Locks</a></li>
+                            <li><a href="#" class="category-filter" data-category="3 Point Locks">3 Point Locks</a></li>
+                            <li><a href="#" class="category-filter" data-category="Handles">Handles</a></li>
+                            <li><a href="#" class="category-filter" data-category="Hinges">Hinges</a></li>
+                            <li><a href="#" class="category-filter" data-category="Gaskets">Gaskets</a></li>
+                        </ul>
+                    </aside>
+                    <main class="products-main">
+                        <div class="products-header">
+                            <h2>Product Catalogue</h2>
+                            <p>Explore our comprehensive range of industrial locks, handles, and accessories</p>
+                        </div>
+                        <div class="products-grid" id="productsGrid">
+                            <!-- Products will be populated by JavaScript -->
+                        </div>
+                    </main>
+                </div>
+            </div>
+        </section>
+
+        <!-- About Section -->
+        <section id="about" class="section about-section hidden">
+            <div class="container">
+                <div class="about-content">
+                    <div class="about-header">
+                        <h2>About Pyrogenic Engineerings (I) Pvt Ltd</h2>
+                        <p class="about-intro">Excellence in Industrial Locking Solutions</p>
+                    </div>
+                    
+                    <div class="about-grid">
+                        <div class="about-card">
+                            <h3>Our Story</h3>
+                            <p>Pyrogenic Engineerings (I) Pvt Ltd was established with a dream and determination of offering to customers the latest in Locking, Latching technology and related Control Panel & Machinery Components. We have been associated with major OEM's, Rack Fabricators and Panel Builders all over India with dealers spread over.</p>
+                            <p>Our Product range Include World Class Industrial Panel Locks and Keys, Canopy Locks & Hinges, 3 & 4 Point Locks, Castle Interlocks, Fan Filters, Door Handles and Panel Accessories. Our Products are now being exported to the Middle East, Far East and Africa.</p>
+                        </div>
+                        
+                        <div class="about-card">
+                            <h3>Infrastructure</h3>
+                            <p>We have the latest state of the art infrastructure to give the best quality products:</p>
+                            <ul class="infrastructure-list">
+                                <li><i class="fas fa-cog"></i> Automatic Pressure Die Casting Machine</li>
+                                <li><i class="fas fa-cog"></i> Automatic Horizontal Moulding Machine</li>
+                                <li><i class="fas fa-cog"></i> Automatic Vertical Moulding Machine</li>
+                                <li><i class="fas fa-cog"></i> Power and Hand Presses</li>
+                                <li><i class="fas fa-cog"></i> Drilling and Tapping Machines</li>
+                                <li><i class="fas fa-cog"></i> Rolling Machine</li>
+                                <li><i class="fas fa-cog"></i> Grinding and Buffing Machines</li>
+                                <li><i class="fas fa-cog"></i> Bending Machine</li>
+                                <li><i class="fas fa-cog"></i> Vibro Finishing Machine</li>
+                            </ul>
+                        </div>
+                        
+                        <div class="about-card">
+                            <h3>Certifications</h3>
+                            <p>Quality is our commitment</p>
+                            <div class="certification">
+                                <i class="fas fa-certificate"></i>
+                                <span>ISO 9001:2015 Certified</span>
+                            </div>
+                        </div>
+                        
+                        <div class="about-card">
+                            <h3>Global Reach</h3>
+                            <p>Our products are exported to:</p>
+                            <ul class="export-markets">
+                                <li><i class="fas fa-globe"></i> Middle East</li>
+                                <li><i class="fas fa-globe"></i> Far East</li>
+                                <li><i class="fas fa-globe"></i> Africa</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="section contact-section hidden">
+            <div class="container">
+                <div class="contact-content">
+                    <div class="contact-header">
+                        <h2>Contact Us</h2>
+                        <p>Get in touch with our team for any inquiries</p>
+                    </div>
+                    
+                    <div class="contact-grid">
+                        <div class="contact-info">
+                            <div class="contact-item">
+                                <h3><i class="fas fa-map-marker-alt"></i> Address</h3>
+                                <p>#19/1, 4th Cross, SSI Area, 5th Block, Rajajinagar, Bangalore 560010</p>
+                            </div>
+                            
+                            <div class="contact-item">
+                                <h3><i class="fas fa-phone"></i> Phone</h3>
+                                <p>+91-80-2340-1588</p>
+                                <p>+91-88841-36192</p>
+                            </div>
+                            
+                            <div class="contact-item">
+                                <h3><i class="fas fa-envelope"></i> Email</h3>
+                                <p>sales@pyramidbangalore.com</p>
+                                <p>snehi@pyramidbangalore.com</p>
+                            </div>
+                            
+                            <div class="contact-item">
+                                <h3><i class="fas fa-clock"></i> Business Hours</h3>
+                                <p>Monday - Saturday: 9:00 AM - 6:00 PM</p>
+                                <p>Sunday: Closed</p>
+                            </div>
+                            
+                            <div class="whatsapp-section">
+                                <h3>Quick Contact</h3>
+                                <a href="https://wa.me/918884136192" target="_blank" class="whatsapp-btn">
+                                    <i class="fab fa-whatsapp"></i> Chat on WhatsApp
+                                </a>
+                            </div>
+                        </div>
+                        
+                        <div class="contact-form-section">
+                            <form class="contact-form" id="contactForm">
+                                <h3>Send us a message</h3>
+                                <div class="form-group">
+                                    <label for="name" class="form-label">Name *</label>
+                                    <input type="text" class="form-control" id="name" name="name" required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="email" class="form-label">Email *</label>
+                                    <input type="email" class="form-control" id="email" name="email" required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="phone" class="form-label">Phone</label>
+                                    <input type="tel" class="form-control" id="phone" name="phone">
+                                </div>
+                                <div class="form-group">
+                                    <label for="message" class="form-label">Message *</label>
+                                    <textarea class="form-control" id="message" name="message" rows="5" required></textarea>
+                                </div>
+                                <button type="submit" class="btn btn--primary btn--full-width">
+                                    <i class="fas fa-paper-plane"></i> Send Message
+                                </button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Product Detail Modal -->
+    <div class="modal hidden" id="productModal">
+        <div class="modal-overlay" id="modalOverlay"></div>
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3 id="modalProductName">Product Name</h3>
+                <button class="modal-close" id="modalClose">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+            <div class="modal-body">
+                <div class="modal-product-details">
+                    <div class="product-detail-item">
+                        <strong>Product Code:</strong>
+                        <span id="modalProductCode"></span>
+                    </div>
+                    <div class="product-detail-item">
+                        <strong>Material:</strong>
+                        <span id="modalProductMaterial"></span>
+                    </div>
+                    <div class="product-detail-item">
+                        <strong>Key Features:</strong>
+                        <ul id="modalProductFeatures"></ul>
+                    </div>
+                    <div class="product-detail-item">
+                        <strong>Applications:</strong>
+                        <span id="modalProductApplications"></span>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <a href="https://wa.me/918884136192?text=I'm interested in product: " target="_blank" class="btn btn--primary" id="modalWhatsAppBtn">
+                    <i class="fab fa-whatsapp"></i> Inquire via WhatsApp
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Enhanced Image Modal for NTP-01 -->
+    <div class="modal hidden" id="imageModal">
+        <div class="modal-overlay" id="imageModalOverlay"></div>
+        <div class="image-modal-content">
+            <div class="image-modal-header">
+                <h3 id="imageModalTitle">Product Images</h3>
+                <button class="modal-close" id="imageModalClose">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+            <div class="image-modal-body">
+                <div class="image-carousel">
+                    <button class="carousel-nav carousel-nav--prev" id="imagePrevBtn">
+                        <i class="fas fa-chevron-left"></i>
+                    </button>
+                    <div class="image-container" id="imageContainer">
+                        <!-- Images will be populated by JavaScript -->
+                    </div>
+                    <button class="carousel-nav carousel-nav--next" id="imageNextBtn">
+                        <i class="fas fa-chevron-right"></i>
+                    </button>
+                </div>
+                <div class="image-counter" id="imageCounter">1 / 2</div>
+            </div>
+        </div>
+    </div>
+
+    <!-- WhatsApp Floating Button -->
+    <div class="whatsapp-float" style="position: fixed; bottom: 20px; right: 20px; z-index: 1000;">
+        <a href="https://wa.me/918884136192" target="_blank" style="display: flex; align-items: center; justify-content: center; width: 60px; height: 60px; background: #25D366; color: white; border-radius: 50%; text-decoration: none; box-shadow: 0 4px 12px rgba(37, 211, 102, 0.3); transition: transform 0.3s ease; font-size: 24px;">
+            <i class="fab fa-whatsapp"></i>
+        </a>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
