@@ -479,7 +479,6 @@ function createProductCard(product) {
 function setupImageModal() {
   if (imageModalClose) {
     imageModalClose.addEventListener('click', function(e) {
-      console.log("cross clicked");
       e.preventDefault();
       e.stopPropagation();
       closeImageModal();
@@ -487,7 +486,6 @@ function setupImageModal() {
   }
   if (imageModalOverlay) {
     imageModalOverlay.addEventListener('click', function(e) {
-      console.log("outside clicked");
       e.preventDefault();
       e.stopPropagation();
       closeImageModal();
@@ -567,14 +565,14 @@ function updateImageDisplay() {
             <div class="spec-item"><strong>Type:</strong> Product Photography</div>
             <div class="spec-item"><strong>View:</strong> Side view with extended rod</div>
             <div class="spec-item"><strong>Material:</strong> Polyamide PA6GF30</div>
-            <div class="spec-item"><strong>Dimensions:</strong> 160mm × 34mm</div>
+            <div class="spec-item"><strong>Dimensions:</strong> 160mm Ã— 34mm</div>
           </div>
         `;
       } else if (isSecondImage) {
         additionalInfo = `
           <div class="image-specs">
             <div class="spec-item"><strong>Type:</strong> Technical Drawing</div>
-            <div class="spec-item"><strong>Dimensions:</strong> 160mm × 34mm</div>
+            <div class="spec-item"><strong>Dimensions:</strong> 160mm Ã— 34mm/div>
             <div class="spec-item"><strong>Material:</strong> Polyamide PA6GF30</div>
             <div class="spec-item"><strong>Rod Type:</strong> 8mm Round Rod</div>
           </div>
