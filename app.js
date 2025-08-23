@@ -8,7 +8,11 @@ const productsData = {
       "name": "Full Metal Heavy Duty Quarter Turn Lock",
       "material": "Zamak 5 Zinc Alloy",
       "features": ["Heavy duty construction", "Multiple barrel lengths", "Various insert types"],
-      "applications": "Industrial control panels"
+      "applications": "Industrial control panels",
+      images: [
+        { src: "/assets/NTP-01ACO Polyamide PA6GF30.jpeg", alt: "Full Metal Heavy Duty Quarter Turn Lock", caption:"NTP-01ACO Polyamide PA6GF30" },
+        { src: "/assets/NTP-01ACO Round Rod-Long Shaft.jpeg", alt: "shaft image", caption:"NTP-01ACO Round Rod-Long Shaft" }
+      ]
     },
     {
       "code": "NSLK-HDP", 
@@ -401,17 +405,16 @@ function renderProducts(searchTerm = '') {
 function createProductCard(product) {
   const card = document.createElement('div');
   card.className = 'product-card';
-  
+
   console.log('Creating card for:', product.code, 'has images:', !!product.images);
-  
-  // Enhanced thumbnail section for products with images, especially NTP-01
+
   let thumbnailSection = '';
   if (product.images && product.images.length > 0) {
     const isNTP01 = product.code === 'NTP-01';
     thumbnailSection = `
       <div class="product-thumbnail" data-has-images="true" data-product="${product.code}">
         <div class="product-image-preview ${isNTP01 ? 'ntp01-preview' : ''}">
-          <i class="fas fa-${isNTP01 ? 'cog' : 'image'}"></i>
+          <img src="${product.images[0].src}" alt="${product.images[0].alt}" class="product-main-image"/>
           <span class="image-label">${isNTP01 ? 'NTP-01 Lock Assembly' : product.images[0].alt}</span>
           <div class="image-count">${product.images.length} image${product.images.length > 1 ? 's' : ''}</div>
           ${isNTP01 ? '<div class="featured-badge">Featured Product</div>' : ''}
@@ -428,7 +431,7 @@ function createProductCard(product) {
       </div>
     `;
   }
-  
+
   card.innerHTML = `
     ${thumbnailSection}
     <div class="product-card-header">
@@ -454,23 +457,23 @@ function createProductCard(product) {
       }
     </div>
   `;
-  
-  // Click handler - prioritize image modal for products with images
+
   card.addEventListener('click', function(e) {
     e.preventDefault();
     e.stopPropagation();
-    
+
     console.log('Product card clicked:', product.code);
-    
+
     if (product.images && product.images.length > 0) {
       showImageModal(product.images, 0, product.name, product);
     } else {
       showProductModal(product);
     }
   });
-  
+
   return card;
 }
+
 
 // Enhanced image modal functionality
 function setupImageModal() {
@@ -545,19 +548,18 @@ function showImageModal(images, startIndex = 0, productName = '', product = null
 function updateImageDisplay() {
   const imageContainer = document.getElementById('imageContainer');
   const imageCounter = document.getElementById('imageCounter');
-  
+
   if (imageContainer && currentImages.length > 0) {
     const currentImage = currentImages[currentImageIndex];
     const isNTP01 = currentProduct && currentProduct.code === 'NTP-01';
     const isFirstImage = currentImageIndex === 0;
     const isSecondImage = currentImageIndex === 1;
-    
-    let iconClass = 'fas fa-image';
+
     let additionalInfo = '';
-    
+
+    // Add extra info for special product
     if (isNTP01) {
       if (isFirstImage) {
-        iconClass = 'fas fa-camera';
         additionalInfo = `
           <div class="image-specs">
             <div class="spec-item"><strong>Type:</strong> Product Photography</div>
@@ -567,32 +569,33 @@ function updateImageDisplay() {
           </div>
         `;
       } else if (isSecondImage) {
-        iconClass = 'fas fa-drafting-compass';
         additionalInfo = `
           <div class="image-specs">
             <div class="spec-item"><strong>Type:</strong> Technical Drawing</div>
-            <div class="spec-item"><strong>Dimensions:</strong> 160mm Ã— 34mm</div>
+            <div class="spec-item"><strong>Dimensions:</strong> 160mm Ã— 34mm/div>
             <div class="spec-item"><strong>Material:</strong> Polyamide PA6GF30</div>
             <div class="spec-item"><strong>Rod Type:</strong> 8mm Round Rod</div>
           </div>
         `;
       }
     }
-    
+
+    // Use <img> tag to actually display the image
     imageContainer.innerHTML = `
       <div class="image-placeholder-large ${isNTP01 ? 'ntp01-large' : ''}">
-        <i class="${iconClass}"></i>
+        <img src="${currentImage.src}" alt="${currentImage.alt}" class="large-image"/>
         <p class="image-title">${currentImage.alt}</p>
         <p class="image-caption">${currentImage.caption}</p>
         ${additionalInfo}
       </div>
     `;
   }
-  
+
   if (imageCounter && currentImages.length > 1) {
     imageCounter.textContent = `${currentImageIndex + 1} / ${currentImages.length}`;
   }
 }
+
 
 function navigateImage(direction) {
   if (!currentImages || currentImages.length <= 1) return;
