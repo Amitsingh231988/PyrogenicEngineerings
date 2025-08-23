@@ -10,8 +10,8 @@ const productsData = {
       "features": ["Heavy duty construction", "Multiple barrel lengths", "Various insert types"],
       "applications": "Industrial control panels",
       images: [
-        { src: "/assets/NTP-01ACO Polyamide PA6GF30.jpeg", alt: "Full Metal Heavy Duty Quarter Turn Lock", caption:"NTP-01ACO Polyamide PA6GF30" },
-        { src: "/assets/NTP-01ACO Round Rod-Long Shaft.jpeg", alt: "shaft image", caption:"NTP-01ACO Round Rod-Long Shaft" }
+        { src: "./assets/NTP-01ACO Polyamide PA6GF30.jpeg", alt: "Full Metal Heavy Duty Quarter Turn Lock", caption:"NTP-01ACO Polyamide PA6GF30" },
+        { src: "./assets/NTP-01ACO Round Rod-Long Shaft.jpeg", alt: "shaft image", caption:"NTP-01ACO Round Rod-Long Shaft" }
       ]
     },
     {
